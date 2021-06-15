@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mã hàng:</strong>
+  <%= @item.code %>
+</p>
+
+<p>
+  <strong>Tên sản phẩm:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Giá chuẩn:</strong>
+  <%= @item.cost %>
+</p>
+
+<%= link_to 'Sửa', edit_item_path(@item) %> |
+<%= link_to 'Quay lại', items_path %>

@@ -1,0 +1,44 @@
+<%= form_with(model: item) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+        <% item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="control-group">
+    <strong>Mã hàng:</strong>
+    <div class="controls">
+    <%= form.text_field :code %>
+    </div>
+  </div>
+
+
+   <div class="control-group">
+    <strong>Tên sản phẩm:</strong>
+    <div class="controls">
+    <%= form.text_field :name%>
+    </div>
+  </div>
+
+
+  <div class="control-group">
+    <strong>Giá chuẩn:</strong>
+    <div class="controls">
+    <%= form.text_field :cost %>
+    </div>
+  </div>
+
+<br>
+  <div class="control-group">
+  <div class="actions">
+    <%= form.submit 'Tạo ', class: 'btn btn-primary'%>
+  </div>
+  </div>
+<% end %>
+<br>
